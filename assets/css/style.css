@@ -1,0 +1,105 @@
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+#main-holder {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  border-radius: 7px;
+  background-color: white;
+}
+
+#cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#loadmore {
+  text-align: center;
+  margin-bottom: 10px;
+}
+#loadmore button {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+}
+.thumb {
+  width: 100%;
+  padding-top: 70%;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.card {
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  flex-basis: 24%;
+}
+.card-header img {
+  width: 100%;
+  object-fit: cover;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px 20px;
+}
+.card-body p {
+  font-size: 13px;
+}
+.user {
+  display: flex;
+  margin-top: auto;
+  margin: 10px;
+  justify-content: space-between;
+}
+
+.user img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.user-info h5 {
+  margin: 0;
+}
+.user-info small {
+  color: #545d7a;
+}
+.border {
+  width: 100%;
+  margin: 0 auto;
+  height: 2px;
+  background-color: silver;
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    flex-basis: 100%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .card {
+    flex-basis: 49%;
+  }
+}
