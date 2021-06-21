@@ -6,17 +6,13 @@ let currentPage = 0;
 let item = null;
 let itemsToShow = 4;
 
-
-
-
 const hasMoreItems = () => {
   if (itemsToShow * currentPage > data.length) {
     loadMoreBtnWrapper.style.display = "none";
     return false;
   }
   return true;
-}
-
+};
 
 const render = () => {
   output = "";
@@ -50,7 +46,6 @@ const render = () => {
       </div>
     </div>
     </div>`;
-
   }
 
   container.innerHTML += `${output}`;
@@ -58,11 +53,11 @@ const render = () => {
   hasMoreItems();
 };
 
-
-
-
-fetch("assets/js/data.json", { mode: 'no-cors' }).then(r => r.json()).then(resp => {
-  data = resp;
-  render();
-});
-
+loadMoreBtnWrapper.style.display = "none";
+fetch("assets/js/data.json", { mode: "no-cors" })
+  .then((r) => r.json())
+  .then((resp) => {
+    data = resp;
+    render();
+    loadMoreBtnWrapper.style.display = "block";
+  });

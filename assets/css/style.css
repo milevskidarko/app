@@ -1,11 +1,9 @@
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 body {
   margin: 0;
   background-color: black;
+  color:#555;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 #main-holder {
@@ -101,5 +99,10 @@ body {
 @media only screen and (max-width: 992px) {
   .card {
     flex-basis: 49%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .card {
+    flex-basis: 100%;
   }
 }
